@@ -1,0 +1,89 @@
+body {
+  margin:0;
+  padding:0;
+}
+
+.banner {
+  position:absolute;
+  display:inline-block;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:800px;
+  text-align:center;
+  justify-content: center;
+}
+
+h1 {
+	font-size: 100px;
+	white-space: nowrap;
+	color: #fff;
+	font-family: poppins;
+	text-shadow: 0 2px 5px #000;
+}
+
+.box {
+  text-align:center;
+  justify-content:center;
+  position: absolute;
+  width:100%;
+  height:100%;
+  background: url('https://images.pexels.com/photos/2339009/pexels-photo-2339009.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-size: cover;
+}
+
+.box:before{
+  content: '';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: url('https://images.pexels.com/photos/2339009/pexels-photo-2339009.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-size: cover;
+  mix-blend-mode:hard-light;
+
+}
+
+.box:hover:before {
+  animation:animate .3s infinite;
+}
+
+@keyframes animate {
+  0%{
+    background-position: 0 0;
+    filter:hue-rotate(0deg);
+  }
+  10%{
+    background-position: 4px 0px;
+  }
+  15%{
+    background-position: -8px 0px;
+  }
+
+  20%{
+    background-position: -4px 0;
+  }
+  30%{
+    background-position: 12px 0;
+  }
+  40%{
+    background-position: -16px 0;
+  }
+  50%{
+    background-position: -24px 0;
+  }
+  60%{
+    background-position: 16px 0;
+  }
+  70%{
+    background-position: 0 22px;
+  }
+  80%{
+    background-position: -40px -10px;
+  }
+  100%{
+    background-position: 0 0;
+    filter:hue-rotate(360deg);
+  }
+}
